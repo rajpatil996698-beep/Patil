@@ -1,232 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ShopEasy - Online Shopping</title>
+    <meta name="description"
+          content="Raj Pawar - Computer Engineering Student Portfolio">
+
+    <title>Raj Pawar | Computer Engineering</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="header">
-
-        <div class="logo">
-            Shop<span>Easy</span>
-        </div>
-
-        <div class="search-box">
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search products..."
-            >
-            <button onclick="searchProducts()">Search</button>
-        </div>
-
-        <div class="header-actions">
-            <button>Login</button>
-            <button class="cart-btn">
-                🛒 Cart <span id="cartCount">0</span>
-            </button>
-        </div>
-
-    </header>
-
-
     <!-- Navigation -->
     <nav class="navbar">
 
-        <a href="#">Home</a>
-        <a href="#products">Products</a>
-        <a href="#categories">Categories</a>
-        <a href="#offers">Offers</a>
-        <a href="#contact">Contact</a>
+        <div class="logo">
+            Raj<span>.</span>
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <button onclick="goToSlide(0)">Home</button>
+            </li>
+
+            <li>
+                <button onclick="goToSlide(1)">About</button>
+            </li>
+
+            <li>
+                <button onclick="goToSlide(2)">Skills</button>
+            </li>
+        </ul>
 
     </nav>
 
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Main Slider -->
+    <main class="slider">
 
-        <div class="hero-content">
+        <!-- =========================
+             SLIDE 1 - HOME
+        ========================== -->
 
-            <h1>Shop Everything You Love</h1>
+        <section class="slide active">
 
-            <p>
-                Discover amazing products at great prices.
-            </p>
+            <div class="content">
 
-            <a href="#products" class="shop-btn">
-                Shop Now
-            </a>
+                <div class="text-content">
+
+                    <div class="tag">
+                        👋 WELCOME TO MY PORTFOLIO
+                    </div>
+
+                    <h1>
+                        Hi, I'm
+                        <span>Raj Pawar</span>
+                    </h1>
+
+                    <h2 class="typing-text">
+                        Computer Engineering Student
+                    </h2>
+
+                    <p class="description">
+
+                        Welcome to my professional portfolio.
+
+                        I am passionate about technology,
+                        programming, web development and
+                        building innovative digital solutions.
+
+                    </p>
+
+                    <div class="buttons">
+
+                        <button
+                            class="btn primary"
+                            onclick="nextSlide()">
+
+                            Explore My Profile →
+
+                        </button>
+
+                        <button
+                            class="btn secondary"
+                            onclick="sayHello()">
+
+                            Say Hello 👋
+
+                        </button>
+
+                    </div>
+
+                    <p id="helloMessage"></p>
+
+                </div>
+
+
+                <!-- Profile Card -->
+
+                <div class="profile-card">
+
+                    <div class="profile-icon">
+                        👨‍💻
+                    </div>
+
+                    <h3>
+                        Raj Pawar
+                    </h3>
+
+                    <p>
+                        Computer Engineering
+                    </p>
+
+
+                    <div class="stats">
+
+                        <div class="stat">
+                            <h4>3+</h4>
+                            <p>Projects</p>
+                        </div>
+
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>Skills</p>
+                        </div>
+
+                        <div class="stat">
+                            <h4>100%</h4>
+                            <p>Passion</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SLIDE 2 - ABOUT
+        ========================== -->
+
+        <section class="slide">
+
+            <div class="content">
+
+                <div class="text-content">
+
+                    <div class="tag">
+                        ABOUT ME
+                    </div>
+
+                    <h1>
+                        Turning Ideas
+                        <span>Into Reality</span>
+                    </h1>
+
+                    <p class="description">
+
+                        I am Raj Pawar, a Computer Engineering
+                        student with a strong interest in software
+                        development and modern technologies.
+
+                        <br><br>
+
+                        I enjoy learning new technologies,
+                        creating websites and developing
+                        innovative projects.
+
+                    </p>
+
+
+                    <div class="feature-grid">
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                💻
+                            </div>
+
+                            <h3>
+                                Development
+                            </h3>
+
+                            <p>
+                                Building modern and responsive
+                                websites.
+                            </p>
+
+                        </div>
+
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                🚀
+                            </div>
+
+                            <h3>
+                                Innovation
+                            </h3>
+
+                            <p>
+                                Exploring new ideas and
+                                technologies.
+                            </p>
+
+                        </div>
+
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                📚
+                            </div>
+
+                            <h3>
+                                Learning
+                            </h3>
+
+                            <p>
+                                Continuously improving technical
+                                skills.
+                            </p>
+
+                        </div>
+
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                🎯
+                            </div>
+
+                            <h3>
+                                Goal
+                            </h3>
+
+                            <p>
+                                Becoming a professional
+                                software engineer.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-card education-card">
+
+                    <div class="profile-icon">
+                        🎓
+                    </div>
+
+                    <h3>
+                        Computer Engineering
+                    </h3>
+
+                    <p>
+                        Student & Future Software Engineer
+                    </p>
+
+                    <div class="education-info">
+
+                        <div>
+                            <span>Department</span>
+                            <strong>
+                                Computer Engineering
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Focus</span>
+                            <strong>
+                                Software Development
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Interest</span>
+                            <strong>
+                                Web & Technology
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SLIDE 3 - SKILLS
+        ========================== -->
+
+        <section class="slide">
+
+            <div class="content">
+
+                <div class="text-content">
+
+                    <div class="tag">
+                        MY SKILLS
+                    </div>
+
+                    <h1>
+                        Technical
+                        <span>Skills</span>
+                    </h1>
+
+                    <p class="description">
+
+                        I am continuously developing my skills
+                        in programming and web technologies.
+
+                    </p>
+
+
+                    <div class="skills">
+
+                        <!-- HTML -->
+
+                        <div class="skill">
+
+                            <div class="skill-heading">
+                                <span>HTML</span>
+                                <span>90%</span>
+                            </div>
+
+                            <div class="skill-bar">
+
+                                <div
+                                    class="skill-progress"
+                                    data-width="90%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CSS -->
+
+                        <div class="skill">
+
+                            <div class="skill-heading">
+                                <span>CSS</span>
+                                <span>85%</span>
+                            </div>
+
+                            <div class="skill-bar">
+
+                                <div
+                                    class="skill-progress"
+                                    data-width="85%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- JavaScript -->
+
+                        <div class="skill">
+
+                            <div class="skill-heading">
+                                <span>JavaScript</span>
+                                <span>75%</span>
+                            </div>
+
+                            <div class="skill-bar">
+
+                                <div
+                                    class="skill-progress"
+                                    data-width="75%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Python -->
+
+                        <div class="skill">
+
+                            <div class="skill-heading">
+                                <span>Python</span>
+                                <span>70%</span>
+                            </div>
+
+                            <div class="skill-bar">
+
+                                <div
+                                    class="skill-progress"
+                                    data-width="70%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="buttons">
+
+                        <button
+                            class="btn primary"
+                            onclick="showSkills()">
+
+                            View My Skills ✓
+
+                        </button>
+
+                    </div>
+
+                    <p id="skillMessage"></p>
+
+                </div>
+
+
+                <div class="profile-card">
+
+                    <div class="profile-icon">
+                        🚀
+                    </div>
+
+                    <h3>
+                        Future Software Engineer
+                    </h3>
+
+                    <p>
+                        Learn • Build • Innovate
+                    </p>
+
+                    <div class="quote">
+
+                        <span>“</span>
+
+                        Keep learning.
+                        Keep building.
+                        Keep growing.
+
+                        <span>”</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Previous Button -->
+
+        <button
+            class="slider-arrow previous"
+            onclick="previousSlide()"
+            aria-label="Previous Slide">
+
+            ❮
+
+        </button>
+
+
+        <!-- Next Button -->
+
+        <button
+            class="slider-arrow next"
+            onclick="nextSlide()"
+            aria-label="Next Slide">
+
+            ❯
+
+        </button>
+
+
+        <!-- Slider Dots -->
+
+        <div class="slider-dots">
+
+            <button
+                class="dot active"
+                onclick="goToSlide(0)"
+                aria-label="Go to Home">
+            </button>
+
+            <button
+                class="dot"
+                onclick="goToSlide(1)"
+                aria-label="Go to About">
+            </button>
+
+            <button
+                class="dot"
+                onclick="goToSlide(2)"
+                aria-label="Go to Skills">
+            </button>
 
         </div>
 
-    </section>
-
-
-    <!-- Categories -->
-    <section class="categories" id="categories">
-
-        <h2>Shop By Category</h2>
-
-        <div class="category-container">
-
-            <div class="category-card">
-                <div class="category-icon">👕</div>
-                <h3>Fashion</h3>
-            </div>
-
-            <div class="category-card">
-                <div class="category-icon">📱</div>
-                <h3>Electronics</h3>
-            </div>
-
-            <div class="category-card">
-                <div class="category-icon">👟</div>
-                <h3>Shoes</h3>
-            </div>
-
-            <div class="category-card">
-                <div class="category-icon">💄</div>
-                <h3>Beauty</h3>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Products -->
-    <section class="products" id="products">
-
-        <h2>Featured Products</h2>
-
-        <div class="product-container" id="productContainer">
-
-            <div class="product-card">
-
-                <div class="product-image">
-                    👕
-                </div>
-
-                <h3>Classic T-Shirt</h3>
-
-                <p class="price">₹499</p>
-
-                <button onclick="addToCart()">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <div class="product-card">
-
-                <div class="product-image">
-                    👟
-                </div>
-
-                <h3>Running Shoes</h3>
-
-                <p class="price">₹1,999</p>
-
-                <button onclick="addToCart()">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <div class="product-card">
-
-                <div class="product-image">
-                    🎧
-                </div>
-
-                <h3>Wireless Headphones</h3>
-
-                <p class="price">₹1,499</p>
-
-                <button onclick="addToCart()">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <div class="product-card">
-
-                <div class="product-image">
-                    ⌚
-                </div>
-
-                <h3>Smart Watch</h3>
-
-                <p class="price">₹2,499</p>
-
-                <button onclick="addToCart()">
-                    Add to Cart
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Offer -->
-    <section class="offer" id="offers">
-
-        <h2>Special Offer 🎉</h2>
-
-        <p>
-            Get up to 50% OFF on selected products.
-        </p>
-
-        <button>View Offers</button>
-
-    </section>
+    </main>
 
 
     <!-- Footer -->
-    <footer id="contact">
 
-        <div class="footer-content">
-
-            <div>
-                <h3>ShopEasy</h3>
-                <p>Your simple online shopping destination.</p>
-            </div>
-
-            <div>
-                <h3>Quick Links</h3>
-                <a href="#">Home</a>
-                <a href="#products">Products</a>
-                <a href="#categories">Categories</a>
-            </div>
-
-            <div>
-                <h3>Contact</h3>
-                <p>Email: support@shopeasy.com</p>
-                <p>Phone: +91 98765 43210</p>
-            </div>
-
-        </div>
-
-        <p class="copyright">
-            © 2026 ShopEasy. All Rights Reserved.
-        </p>
-
+    <footer>
+        © 2026 Raj Pawar | Computer Engineering
     </footer>
 
+
+    <!-- JavaScript -->
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
